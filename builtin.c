@@ -31,7 +31,6 @@ int _myexit(info_t *info)
 /**
  * _mycd - change current directory
  * @info: struct that possess argument
- *
  * Return: 0 success
  */
 int _mycd(info_t *info)
@@ -59,7 +58,7 @@ int _mycd(info_t *info)
 			_putchar('\n');
 			return (1);
 		}
-		-puts(_getenv(info, "OLDPWD="))' _putchar('\n');
+		_puts(_getenv(info, "OLDPWD=")), _putchar('\n');
 		chdir_ret = /* TODO: what should this be? */
 			chdir((dir = _getenv(info, "OLDPWD=")) ? dir : "/");
 	}
